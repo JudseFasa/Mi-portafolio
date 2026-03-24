@@ -1,0 +1,46 @@
+---
+const technologies = [
+  { name: "Python", icon: "🐍", color: "from-blue-400 to-yellow-500" },
+  { name: "Supabase", icon: "⚡", color: "from-green-400 to-emerald-600" },
+  { name: "PostgreSQL", icon: "🐘", color: "from-blue-600 to-indigo-600" },
+  { name: "SQLite", icon: "🗄️", color: "from-blue-300 to-blue-500" },
+  { name: "Git", icon: "📦", color: "from-orange-400 to-red-600" },
+  { name: "Playwright", icon: "🎭", color: "from-green-500 to-teal-500" },
+  { name: "Tkinter", icon: "🖥️", color: "from-purple-400 to-purple-600" },
+  { name: "Web Scraping", icon: "🕷️", color: "from-gray-400 to-gray-600" },
+  { name: "Análisis de Datos", icon: "📊", color: "from-cyan-400 to-cyan-600" },
+  { name: "Automatización", icon: "🤖", color: "from-indigo-400 to-indigo-600" },
+  { name: "Soporte Técnico", icon: "🔧", color: "from-amber-400 to-amber-600" },
+  { name: "Hardware", icon: "💻", color: "from-slate-400 to-slate-600" },
+];
+---
+
+<section id="tech-stack" class="py-20 lg:py-28 bg-surface-light/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-sm uppercase tracking-widest text-primary-light mb-3 font-semibold">Tech Stack</h2>
+      <h3 class="text-3xl sm:text-4xl font-bold">
+        Tecnologías y <span class="text-accent">habilidades</span>
+      </h3>
+      <p class="text-text-secondary mt-4 max-w-2xl mx-auto">
+        Herramientas y competencias con las que trabajo para crear soluciones de automatización y análisis de datos.
+      </p>
+    </div>
+
+    <!-- Tech Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      {technologies.map((tech) => (
+        <div class="group relative p-6 rounded-2xl bg-surface border border-white/5 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 text-center cursor-default">
+          <div class="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+            {tech.icon}
+          </div>
+          <span class="text-sm font-medium text-text-secondary group-hover:text-text-primary transition-colors">
+            {tech.name}
+          </span>
+          <div class={`absolute inset-0 rounded-2xl bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

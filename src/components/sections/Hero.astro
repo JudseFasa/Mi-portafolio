@@ -1,0 +1,75 @@
+---
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background effects -->
+  <div class="absolute inset-0">
+    <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[128px] animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[128px] animate-pulse" style="animation-delay: 1s;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Greeting -->
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
+      <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+      <span class="text-sm text-primary-light">Disponible para nuevos proyectos</span>
+    </div>
+
+    <!-- Name -->
+    <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      Hola, soy
+      <span class="bg-gradient-to-r from-primary-light via-accent to-primary bg-clip-text text-transparent">
+        Thomas Rodríguez
+      </span>
+    </h1>
+
+    <!-- Title -->
+    <p class="text-xl sm:text-2xl text-text-secondary mb-4 font-light">
+      Ingeniero Informático · Automatización & Análisis de Datos
+    </p>
+    <p class="text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+      Creo automatizaciones eficientes orientadas al análisis de datos y optimización de procesos. 
+      Me apasiona transformar datos en decisiones inteligentes con Python, Supabase y herramientas modernas.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="#contacto"
+        class="group px-8 py-3.5 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:-translate-y-0.5"
+      >
+        Contáctame
+        <span class="inline-block ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+      </a>
+      <a
+        href="/cv.pdf"
+        download
+        class="group px-8 py-3.5 bg-surface-light border border-white/10 text-text-primary font-semibold rounded-xl hover:border-primary/50 hover:bg-surface-lighter/50 transition-all duration-300 hover:-translate-y-0.5"
+      >
+        <span class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-primary-light group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          Descargar CV
+        </span>
+      </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+</style>

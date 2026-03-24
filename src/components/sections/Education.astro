@@ -1,0 +1,63 @@
+---
+const education = [
+  {
+    degree: "Ingeniería Informática",
+    institution: "Unipaz",
+    period: "En curso",
+    description: "Formación integral en desarrollo de software, bases de datos, redes, sistemas distribuidos y análisis de datos.",
+    icon: "🎓",
+  },
+  {
+    degree: "Técnico en el SENA",
+    institution: "SENA",
+    period: "Completado",
+    description: "Formación técnica profesional en tecnologías de la información.",
+    icon: "🏛️",
+  },
+  {
+    degree: "Técnico CASD",
+    institution: "CASD",
+    period: "Completado",
+    description: "Formación técnica en competencias tecnológicas y digitales.",
+    icon: "📚",
+  },
+];
+---
+
+<section id="formacion" class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-sm uppercase tracking-widest text-primary-light mb-3 font-semibold">Formación</h2>
+      <h3 class="text-3xl sm:text-4xl font-bold">
+        Mi <span class="text-accent">formación</span> académica
+      </h3>
+    </div>
+
+    <!-- Education Cards -->
+    <div class="max-w-3xl mx-auto space-y-6">
+      {education.map((edu) => (
+        <div class="group p-6 rounded-2xl bg-surface-light border border-white/5 hover:border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+              {edu.icon}
+            </div>
+
+            <div class="flex-1">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                <h4 class="text-lg font-bold text-text-primary group-hover:text-primary-light transition-colors">
+                  {edu.degree}
+                </h4>
+                <span class="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full w-fit">
+                  {edu.period}
+                </span>
+              </div>
+              <p class="text-primary-light text-sm mb-2">{edu.institution}</p>
+              <p class="text-text-secondary text-sm leading-relaxed">{edu.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
